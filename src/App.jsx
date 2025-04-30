@@ -4,7 +4,6 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 // import Draggable from "react-draggable"; 
-import Draggable, {DraggableCore} from 'react-draggable'; 
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -53,7 +52,6 @@ function App() {
             ) : (
               tasks.map((task, index) => {
                 return (
-                  <Draggable>
                     <li
                       key={index}
                       className="flex items-center justify-between bg-gray-50 hover:bg-gray-100 py-2 px-4 rounded-xl shadow-sm transition-all"
@@ -71,7 +69,6 @@ function App() {
                         Delete
                       </button>
                     </li>
-                  </Draggable>
                 );
               })
             )}
